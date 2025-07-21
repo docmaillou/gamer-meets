@@ -1,0 +1,53 @@
+{
+  "title": "Conversations",
+  "messageInput": {
+    "placeholder": "Tapez votre message...",
+    "send": "Envoyer"
+  },
+  "messageStatus": {
+    "sending": "Envoi...",
+    "sent": "Envoyé",
+    "delivered": "Distribué",
+    "read": "Lu"
+  },
+  "conversation": {
+    "typing": "{{name}} est en train d'écrire...",
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "lastSeen": "Vu pour la dernière fois {{time}}"
+  },
+  "newConversation": {
+    "title": "Nouvelle conversation",
+    "searchPlaceholder": "Rechercher un contact...",
+    "noResults": "Aucun contact trouvé",
+    "create": "Créer la conversation"
+  },
+  "conversationList": {
+    "noMessages": "Aucun message",
+    "newMessage": "Nouveau message",
+    "draft": "Brouillon: {{text}}"
+  },
+  "actions": {
+    "deleteMessage": "Supprimer le message",
+    "editMessage": "Modifier le message",
+    "copyMessage": "Copier le message",
+    "reportMessage": "Signaler le message"
+  },
+  "empty": {
+    "noConversations": "Aucune conversation",
+    "startChatting": "Commencez à discuter avec d'autres joueurs !",
+    "noMessages": "Aucun message encore",
+    "sayHello": "Dites bonjour !"
+  },
+  "errors": {
+    "failedToSend": "Échec de l'envoi",
+    "messageEmpty": "Le message ne peut pas être vide",
+    "messageTooLong": "Message trop long"
+  },
+  "time": {
+    "yesterday": "Hier",
+    "loading": "Chargement...",
+    "unknown": "Inconnu",
+    "newConversation": "Nouvelle conversation"
+  }
+}

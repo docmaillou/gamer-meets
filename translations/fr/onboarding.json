@@ -1,0 +1,65 @@
+{
+  "progress": "Étape {{current}} sur {{total}}",
+  "gamerType": {
+    "title": "Quel type de joueur êtes-vous ?",
+    "subtitle": "Choisissez votre style de jeu principal",
+    "casual": {
+      "title": "Décontracté",
+      "description": "Je joue pour me détendre et m'amuser"
+    },
+    "competitive": {
+      "title": "Compétitif",
+      "description": "J'aime la compétition et améliorer mes performances"
+    },
+    "creator": {
+      "title": "Créateur",
+      "description": "Je crée du contenu gaming (stream, vidéos, etc.)"
+    }
+  },
+  "favoriteGames": {
+    "title": "Vos jeux favoris",
+    "subtitle": "Sélectionnez les jeux auxquels vous jouez",
+    "searchPlaceholder": "Rechercher un jeu...",
+    "customGame": "Ajouter un jeu personnalisé",
+    "minSelection": "Sélectionnez au moins un jeu",
+    "maxSelection": "Maximum {{max}} jeux",
+    "selectedCount": "{{count}} / 10 jeux sélectionnés"
+  },
+  "meetPreference": {
+    "title": "Comment préférez-vous jouer ?",
+    "subtitle": "Choisissez votre mode de rencontre préféré",
+    "online": {
+      "title": "En ligne",
+      "description": "Rencontres virtuelles et parties en ligne"
+    },
+    "inPerson": {
+      "title": "En personne",
+      "description": "Événements physiques et rencontres locales"
+    },
+    "mixed": {
+      "title": "Les deux",
+      "description": "Je suis ouvert aux deux options"
+    }
+  },
+  "bio": {
+    "title": "Parlez-nous de vous",
+    "subtitle": "Rédigez une courte biographie",
+    "placeholder": "Ex: Joueur passionné depuis 10 ans, j'adore les FPS et les jeux de stratégie. Toujours partant pour découvrir de nouveaux jeux !",
+    "minLength": "Minimum {{min}} caractères",
+    "maxLength": "Maximum {{max}} caractères",
+    "currentLength": "{{current}}/{{max}} caractères"
+  },
+  "avatar": {
+    "title": "Photo de profil",
+    "subtitle": "Ajoutez une photo (optionnel)",
+    "selectPhoto": "Choisir une photo",
+    "takePhoto": "Prendre une photo",
+    "removePhoto": "Supprimer la photo",
+    "skip": "Passer cette étape"
+  },
+  "completion": {
+    "title": "Profil créé !",
+    "subtitle": "Bienvenue dans Gamer Meets",
+    "startExploring": "Commencer à explorer"
+  }
+}

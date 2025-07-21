@@ -1,0 +1,65 @@
+{
+  "title": "Groups",
+  "tabs": {
+    "discover": "Discover",
+    "myGroups": "My Groups",
+    "created": "Created"
+  },
+  "createGroup": {
+    "title": "Create Group",
+    "nameLabel": "Group Name",
+    "namePlaceholder": "e.g: Valorant Pros",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Describe your group...",
+    "gameLabel": "Main Game",
+    "typeLabel": "Group Type",
+    "public": "Public",
+    "private": "Private",
+    "maxMembersLabel": "Maximum Members",
+    "create": "Create Group"
+  },
+  "groupCard": {
+    "memberCount": "{{count}} member",
+    "memberCount_other": "{{count}} members",
+    "owner": "Owner",
+    "admin": "Admin",
+    "member": "Member"
+  },
+  "groupDetail": {
+    "members": "Members",
+    "description": "Description",
+    "gameInfo": "Main Game",
+    "type": "Type",
+    "owner": "Owner",
+    "join": "Join",
+    "leave": "Leave",
+    "edit": "Edit",
+    "delete": "Delete",
+    "chat": "Chat",
+    "invite": "Invite",
+    "settings": "Settings"
+  },
+  "filters": {
+    "all": "All",
+    "myGroups": "My Groups",
+    "game": "By Game",
+    "type": "By Type"
+  },
+  "empty": {
+    "noGroups": "No groups found",
+    "createFirst": "Create your first group!",
+    "notMember": "You're not a member of any group",
+    "joinOrCreate": "Join or create a group!"
+  },
+  "loading": "Loading...",
+  "memberCount": "{{count}} member",
+  "memberCount_other": "{{count}} members",
+  "validation": {
+    "nameRequired": "Name is required",
+    "nameTooShort": "Name must be at least 3 characters",
+    "nameTooLong": "Name cannot exceed 50 characters",
+    "descriptionRequired": "Description is required",
+    "descriptionTooShort": "Description must be at least 10 characters",
+    "gameRequired": "Select a game"
+  }
+}

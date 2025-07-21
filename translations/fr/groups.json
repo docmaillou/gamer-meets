@@ -1,0 +1,65 @@
+{
+  "title": "Groupes",
+  "tabs": {
+    "discover": "Découvrir",
+    "myGroups": "Mes groupes",
+    "created": "Créés"
+  },
+  "createGroup": {
+    "title": "Créer un groupe",
+    "nameLabel": "Nom du groupe",
+    "namePlaceholder": "Ex: Les pros de Valorant",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Décrivez votre groupe...",
+    "gameLabel": "Jeu principal",
+    "typeLabel": "Type de groupe",
+    "public": "Public",
+    "private": "Privé",
+    "maxMembersLabel": "Nombre maximum de membres",
+    "create": "Créer le groupe"
+  },
+  "groupCard": {
+    "memberCount": "{{count}} membre",
+    "memberCount_other": "{{count}} membres",
+    "owner": "Propriétaire",
+    "admin": "Administrateur",
+    "member": "Membre"
+  },
+  "groupDetail": {
+    "members": "Membres",
+    "description": "Description",
+    "gameInfo": "Jeu principal",
+    "type": "Type",
+    "owner": "Propriétaire",
+    "join": "Rejoindre",
+    "leave": "Quitter",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "chat": "Discussion",
+    "invite": "Inviter",
+    "settings": "Paramètres"
+  },
+  "filters": {
+    "all": "Tous",
+    "myGroups": "Mes groupes",
+    "game": "Par jeu",
+    "type": "Par type"
+  },
+  "empty": {
+    "noGroups": "Aucun groupe trouvé",
+    "createFirst": "Créez votre premier groupe !",
+    "notMember": "Vous n'êtes membre d'aucun groupe",
+    "joinOrCreate": "Rejoignez ou créez un groupe !"
+  },
+  "loading": "Chargement...",
+  "memberCount": "{{count}} membre",
+  "memberCount_other": "{{count}} membres",
+  "validation": {
+    "nameRequired": "Le nom est requis",
+    "nameTooShort": "Le nom doit faire au moins 3 caractères",
+    "nameTooLong": "Le nom ne peut pas dépasser 50 caractères",
+    "descriptionRequired": "La description est requise",
+    "descriptionTooShort": "La description doit faire au moins 10 caractères",
+    "gameRequired": "Sélectionnez un jeu"
+  }
+}

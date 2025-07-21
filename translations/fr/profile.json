@@ -1,0 +1,79 @@
+{
+  "title": "Profil",
+  "sections": {
+    "profile": "Informations du profil",
+    "settings": "Paramètres",
+    "about": "À propos"
+  },
+  "profile": {
+    "edit": "Modifier le profil",
+    "gamerType": "Type de joueur",
+    "favoriteGames": "Jeux favoris",
+    "meetPreference": "Préférence de rencontre",
+    "bio": "Biographie",
+    "joinedDate": "Membre depuis {{date}}",
+    "stats": {
+      "meetsCreated": "Rencontres créées",
+      "meetsJoined": "Rencontres rejointes",
+      "conversations": "Conversations"
+    }
+  },
+  "settings": {
+    "language": "Langue",
+    "french": "Français",
+    "english": "English",
+    "notifications": "Notifications",
+    "pushNotifications": "Notifications push",
+    "emailNotifications": "Notifications par email",
+    "privacy": "Confidentialité",
+    "profileVisibility": "Visibilité du profil",
+    "showOnlineStatus": "Afficher le statut en ligne",
+    "account": "Compte",
+    "changePhoneNumber": "Changer de numéro",
+    "deleteAccount": "Supprimer le compte",
+    "logout": "Se déconnecter"
+  },
+  "editProfile": {
+    "title": "Modifier le profil",
+    "save": "Enregistrer les modifications",
+    "cancel": "Annuler",
+    "changeAvatar": "Changer la photo",
+    "removeAvatar": "Supprimer la photo"
+  },
+  "gamerTypes": {
+    "casual": "Décontracté",
+    "competitive": "Compétitif",
+    "creator": "Créateur"
+  },
+  "meetPreferences": {
+    "online": "En ligne",
+    "inPerson": "En personne",
+    "mixed": "Les deux"
+  },
+  "about": {
+    "version": "Version {{version}}",
+    "support": "Support",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "feedback": "Commentaires"
+  },
+  "confirmations": {
+    "logout": {
+      "title": "Se déconnecter",
+      "message": "Êtes-vous sûr de vouloir vous déconnecter ?",
+      "confirm": "Se déconnecter",
+      "cancel": "Annuler"
+    },
+    "deleteAccount": {
+      "title": "Supprimer le compte",
+      "message": "Cette action est irréversible. Toutes vos données seront supprimées.",
+      "confirm": "Supprimer",
+      "cancel": "Annuler"
+    }
+  },
+  "success": {
+    "profileUpdated": "Profil mis à jour avec succès",
+    "settingsUpdated": "Paramètres mis à jour",
+    "languageChanged": "Langue modifiée"
+  }
+}

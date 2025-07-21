@@ -1,0 +1,65 @@
+{
+  "progress": "Step {{current}} of {{total}}",
+  "gamerType": {
+    "title": "What type of gamer are you?",
+    "subtitle": "Choose your main gaming style",
+    "casual": {
+      "title": "Casual",
+      "description": "I play to relax and have fun"
+    },
+    "competitive": {
+      "title": "Competitive",
+      "description": "I love competition and improving my performance"
+    },
+    "creator": {
+      "title": "Creator",
+      "description": "I create gaming content (stream, videos, etc.)"
+    }
+  },
+  "favoriteGames": {
+    "title": "Your favorite games",
+    "subtitle": "Select the games you play",
+    "searchPlaceholder": "Search for a game...",
+    "customGame": "Add custom game",
+    "minSelection": "Select at least one game",
+    "maxSelection": "Maximum {{max}} games",
+    "selectedCount": "{{count}} / 10 games selected"
+  },
+  "meetPreference": {
+    "title": "How do you prefer to play?",
+    "subtitle": "Choose your preferred meeting mode",
+    "online": {
+      "title": "Online",
+      "description": "Virtual meetings and online gaming"
+    },
+    "inPerson": {
+      "title": "In person",
+      "description": "Physical events and local meetups"
+    },
+    "mixed": {
+      "title": "Both",
+      "description": "I'm open to both options"
+    }
+  },
+  "bio": {
+    "title": "Tell us about yourself",
+    "subtitle": "Write a short biography",
+    "placeholder": "e.g: Passionate gamer for 10 years, I love FPS and strategy games. Always up for discovering new games!",
+    "minLength": "Minimum {{min}} characters",
+    "maxLength": "Maximum {{max}} characters",
+    "currentLength": "{{current}}/{{max}} characters"
+  },
+  "avatar": {
+    "title": "Profile picture",
+    "subtitle": "Add a photo (optional)",
+    "selectPhoto": "Choose a photo",
+    "takePhoto": "Take a photo",
+    "removePhoto": "Remove photo",
+    "skip": "Skip this step"
+  },
+  "completion": {
+    "title": "Profile created!",
+    "subtitle": "Welcome to Gamer Meets",
+    "startExploring": "Start exploring"
+  }
+}

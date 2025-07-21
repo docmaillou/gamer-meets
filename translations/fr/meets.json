@@ -1,0 +1,68 @@
+{
+  "title": "Rencontres",
+  "tabs": {
+    "upcoming": "À venir",
+    "ongoing": "En cours",
+    "past": "Passées"
+  },
+  "createMeet": {
+    "title": "Créer une rencontre",
+    "gameLabel": "Jeu",
+    "titleLabel": "Titre de la rencontre",
+    "titlePlaceholder": "Ex: Partie ranked Valorant",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Décrivez votre rencontre...",
+    "dateLabel": "Date et heure",
+    "typeLabel": "Type de rencontre",
+    "online": "En ligne",
+    "inPerson": "En personne",
+    "locationLabel": "Lieu",
+    "locationPlaceholder": "Adresse ou lieu de rendez-vous",
+    "maxParticipantsLabel": "Nombre maximum de participants",
+    "create": "Créer la rencontre"
+  },
+  "meetCard": {
+    "hosted": "Organisé par vous",
+    "participantCount": "{{count}} participant",
+    "participantCount_other": "{{count}} participants",
+    "timeLeft": "Dans {{time}}",
+    "inProgress": "En cours",
+    "ended": "Terminée"
+  },
+  "meetDetail": {
+    "participants": "Participants",
+    "description": "Description",
+    "gameInfo": "Informations du jeu",
+    "dateTime": "Date et heure",
+    "location": "Lieu",
+    "host": "Organisateur",
+    "join": "Rejoindre",
+    "leave": "Quitter",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "chat": "Discussion",
+    "full": "Complet"
+  },
+  "filters": {
+    "all": "Tous",
+    "myMeets": "Mes rencontres",
+    "game": "Par jeu",
+    "type": "Par type",
+    "distance": "Distance"
+  },
+  "empty": {
+    "noMeets": "Aucune rencontre trouvée",
+    "createFirst": "Créez votre première rencontre !"
+  },
+  "validation": {
+    "titleRequired": "Le titre est requis",
+    "titleTooShort": "Le titre doit faire au moins 3 caractères",
+    "titleTooLong": "Le titre ne peut pas dépasser 100 caractères",
+    "descriptionRequired": "La description est requise",
+    "descriptionTooShort": "La description doit faire au moins 10 caractères",
+    "gameRequired": "Sélectionnez un jeu",
+    "dateRequired": "Sélectionnez une date",
+    "dateInPast": "La date doit être dans le futur",
+    "locationRequired": "Le lieu est requis pour les rencontres en personne"
+  }
+}

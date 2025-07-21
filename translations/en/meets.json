@@ -1,0 +1,68 @@
+{
+  "title": "Meets",
+  "tabs": {
+    "upcoming": "Upcoming",
+    "ongoing": "Ongoing",
+    "past": "Past"
+  },
+  "createMeet": {
+    "title": "Create meet",
+    "gameLabel": "Game",
+    "titleLabel": "Meet title",
+    "titlePlaceholder": "e.g: Valorant ranked match",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Describe your meet...",
+    "dateLabel": "Date and time",
+    "typeLabel": "Meet type",
+    "online": "Online",
+    "inPerson": "In person",
+    "locationLabel": "Location",
+    "locationPlaceholder": "Address or meeting place",
+    "maxParticipantsLabel": "Maximum number of participants",
+    "create": "Create meet"
+  },
+  "meetCard": {
+    "hosted": "Hosted by you",
+    "participantCount": "{{count}} participant",
+    "participantCount_other": "{{count}} participants",
+    "timeLeft": "In {{time}}",
+    "inProgress": "In progress",
+    "ended": "Ended"
+  },
+  "meetDetail": {
+    "participants": "Participants",
+    "description": "Description",
+    "gameInfo": "Game info",
+    "dateTime": "Date and time",
+    "location": "Location",
+    "host": "Host",
+    "join": "Join",
+    "leave": "Leave",
+    "edit": "Edit",
+    "delete": "Delete",
+    "chat": "Chat",
+    "full": "Full"
+  },
+  "filters": {
+    "all": "All",
+    "myMeets": "My meets",
+    "game": "By game",
+    "type": "By type",
+    "distance": "Distance"
+  },
+  "empty": {
+    "noMeets": "No meets found",
+    "createFirst": "Create your first meet!"
+  },
+  "validation": {
+    "titleRequired": "Title is required",
+    "titleTooShort": "Title must be at least 3 characters",
+    "titleTooLong": "Title cannot exceed 100 characters",
+    "descriptionRequired": "Description is required",
+    "descriptionTooShort": "Description must be at least 10 characters",
+    "gameRequired": "Select a game",
+    "dateRequired": "Select a date",
+    "dateInPast": "Date must be in the future",
+    "locationRequired": "Location is required for in-person meets"
+  }
+}

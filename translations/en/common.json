@@ -1,0 +1,50 @@
+{
+  "buttons": {
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "join": "Join",
+    "leave": "Leave",
+    "create": "Create",
+    "send": "Send",
+    "retry": "Retry",
+    "skip": "Skip",
+    "done": "Done"
+  },
+  "loading": {
+    "default": "Loading...",
+    "authenticating": "Authenticating...",
+    "saving": "Saving...",
+    "sending": "Sending..."
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "network": "Connection error",
+    "unauthorized": "Unauthorized",
+    "notFound": "Not found",
+    "validation": "Invalid data",
+    "required": "This field is required"
+  },
+  "success": {
+    "saved": "Successfully saved",
+    "updated": "Successfully updated",
+    "deleted": "Successfully deleted",
+    "sent": "Successfully sent"
+  },
+  "labels": {
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "participants": "Participants",
+    "description": "Description",
+    "title": "Title",
+    "name": "Name"
+  }
+}

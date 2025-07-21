@@ -1,0 +1,184 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions for security
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(resource) {
+      return request.auth.uid == resource.data.createdBy
+        || request.auth.uid == resource.data.userId;
+    }
+    
+    function isValidString(value, minLength, maxLength) {
+      return value is string 
+        && value.size() >= minLength 
+        && value.size() <= maxLength;
+    }
+    
+    function isValidData(data) {
+      return data.keys().hasAll(['createdAt', 'updatedAt']) 
+        && data.createdAt is timestamp 
+        && data.updatedAt is timestamp;
+    }
+    
+    function isRateLimited() {
+      // Basic rate limiting - allow max 10 writes per minute
+      return request.time < resource.data.lastWrite + duration.value(6, 's');
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (
+        request.auth.uid == userId 
+        || request.auth.token.admin == true
+      );
+      
+      allow create: if isAuthenticated() 
+        && request.auth.uid == userId
+        && isValidData(incoming())
+        && isValidString(incoming().phoneNumber, 10, 20)
+        && (!exists(/databases/$(database)/documents/users/$(userId)));
+      
+      allow update: if isAuthenticated() 
+        && request.auth.uid == userId
+        && isValidData(incoming())
+        && !isRateLimited()
+        && incoming().createdBy == resource.data.createdBy
+        && incoming().phoneNumber == resource.data.phoneNumber;
+      
+      allow delete: if isAuthenticated() 
+        && request.auth.uid == userId;
+
+      function incoming() {
+        return request.resource.data;
+      }
+    }
+
+    // Meets collection
+    match /meets/{meetId} {
+      allow read: if isAuthenticated();
+      
+      allow create: if isAuthenticated()
+        && isValidData(incoming())
+        && isValidString(incoming().title, 3, 100)
+        && isValidString(incoming().description, 10, 1000)
+        && incoming().createdBy == request.auth.uid
+        && incoming().maxParticipants is int
+        && incoming().maxParticipants >= 2
+        && incoming().maxParticipants <= 50;
+      
+      allow update: if isAuthenticated() 
+        && isOwner(resource)
+        && !isRateLimited()
+        && incoming().createdBy == resource.data.createdBy;
+      
+      allow delete: if isAuthenticated() 
+        && isOwner(resource);
+
+      function incoming() {
+        return request.resource.data;
+      }
+    }
+
+    // Groups collection
+    match /groups/{groupId} {
+      allow read: if isAuthenticated();
+      
+      allow create: if isAuthenticated()
+        && isValidData(incoming())
+        && isValidString(incoming().name, 2, 50)
+        && isValidString(incoming().description, 10, 500)
+        && incoming().createdBy == request.auth.uid
+        && incoming().maxMembers is int
+        && incoming().maxMembers >= 2
+        && incoming().maxMembers <= 100;
+      
+      allow update: if isAuthenticated() 
+        && (isOwner(resource) || isMember())
+        && !isRateLimited();
+      
+      allow delete: if isAuthenticated() 
+        && isOwner(resource);
+
+      function incoming() {
+        return request.resource.data;
+      }
+      
+      function isMember() {
+        return request.auth.uid in resource.data.members;
+      }
+    }
+
+    // Conversations collection
+    match /conversations/{conversationId} {
+      allow read: if isAuthenticated() 
+        && request.auth.uid in resource.data.participants;
+      
+      allow create: if isAuthenticated()
+        && isValidData(incoming())
+        && request.auth.uid in incoming().participants
+        && incoming().participants.size() >= 2
+        && incoming().participants.size() <= 20;
+      
+      allow update: if isAuthenticated() 
+        && request.auth.uid in resource.data.participants
+        && !isRateLimited();
+
+      function incoming() {
+        return request.resource.data;
+      }
+
+      // Messages subcollection
+      match /messages/{messageId} {
+        allow read: if isAuthenticated() 
+          && request.auth.uid in get(/databases/$(database)/documents/conversations/$(conversationId)).data.participants;
+        
+        allow create: if isAuthenticated()
+          && isValidData(incoming())
+          && incoming().senderId == request.auth.uid
+          && isValidString(incoming().content, 1, 1000)
+          && request.auth.uid in get(/databases/$(database)/documents/conversations/$(conversationId)).data.participants;
+        
+        allow update: if isAuthenticated() 
+          && incoming().senderId == request.auth.uid
+          && resource.data.senderId == request.auth.uid
+          && !isRateLimited();
+        
+        allow delete: if isAuthenticated() 
+          && resource.data.senderId == request.auth.uid;
+
+        function incoming() {
+          return request.resource.data;
+        }
+      }
+    }
+
+    // User reports collection (for moderation)
+    match /reports/{reportId} {
+      allow read: if isAuthenticated() 
+        && request.auth.token.admin == true;
+      
+      allow create: if isAuthenticated()
+        && isValidData(incoming())
+        && incoming().reportedBy == request.auth.uid
+        && isValidString(incoming().reason, 10, 500);
+
+      function incoming() {
+        return request.resource.data;
+      }
+    }
+
+    // Admin-only collections
+    match /admin/{document=**} {
+      allow read, write: if isAuthenticated() 
+        && request.auth.token.admin == true;
+    }
+
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

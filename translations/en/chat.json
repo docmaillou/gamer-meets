@@ -1,0 +1,53 @@
+{
+  "title": "Conversations",
+  "messageInput": {
+    "placeholder": "Type your message...",
+    "send": "Send"
+  },
+  "messageStatus": {
+    "sending": "Sending...",
+    "sent": "Sent",
+    "delivered": "Delivered",
+    "read": "Read"
+  },
+  "conversation": {
+    "typing": "{{name}} is typing...",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Last seen {{time}}"
+  },
+  "newConversation": {
+    "title": "New conversation",
+    "searchPlaceholder": "Search contacts...",
+    "noResults": "No contacts found",
+    "create": "Create conversation"
+  },
+  "conversationList": {
+    "noMessages": "No messages",
+    "newMessage": "New message",
+    "draft": "Draft: {{text}}"
+  },
+  "actions": {
+    "deleteMessage": "Delete message",
+    "editMessage": "Edit message",
+    "copyMessage": "Copy message",
+    "reportMessage": "Report message"
+  },
+  "empty": {
+    "noConversations": "No conversations",
+    "startChatting": "Start chatting with other gamers!",
+    "noMessages": "No messages yet",
+    "sayHello": "Say hello!"
+  },
+  "errors": {
+    "failedToSend": "Failed to send",
+    "messageEmpty": "Message cannot be empty",
+    "messageTooLong": "Message too long"
+  },
+  "time": {
+    "yesterday": "Yesterday",
+    "loading": "Loading...",
+    "unknown": "Unknown",
+    "newConversation": "New conversation"
+  }
+}

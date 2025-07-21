@@ -8,9 +8,11 @@ Backend: Firebase (Auth + Firestore)
 
 Phone number is the only login method and serves as user ID
 
-Clean, modern UI with persistent footer navigation (4 tabs: Meet, Meeting, Conversations, Profile)
+Clean, modern UI with persistent footer navigation (3 tabs: Meet, Conversations/Groups, Profile)
 
 No emojis allowed anywhere in the app
+
+NO MOCK DATA - All data must come from Firebase infrastructure only
 
 Modular architecture by feature, optimized for team handoff
 

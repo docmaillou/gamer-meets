@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gamer Meets - Rencontres Gaming</title>
+    <meta name="description" content="Connectez-vous avec d'autres gamers, créez et rejoignez des rencontres gaming en ligne et en personne.">
+    
+    <!-- Web app manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- iOS PWA meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Gamer Meets">
+    
+    <!-- Theme colors -->
+    <meta name="theme-color" content="#007AFF">
+    <meta name="msapplication-TileColor" content="#007AFF">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #F2F2F7;
+            color: #1C1C1E;
+            line-height: 1.6;
+        }
+        
+        #root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .loading-subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: #F2F2F7;
+        }
+        
+        .error-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #FF3B30;
+        }
+        
+        .error-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1C1C1E;
+            text-align: center;
+        }
+        
+        .error-message {
+            font-size: 16px;
+            color: #8E8E93;
+            text-align: center;
+            max-width: 400px;
+            margin-bottom: 30px;
+        }
+        
+        .retry-button {
+            background-color: #007AFF;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .retry-button:hover {
+            background-color: #0056D6;
+        }
+        
+        .retry-button:active {
+            background-color: #004494;
+        }
+        
+        /* Hide elements until app loads */
+        .expo-loading-hide {
+            display: none;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .loading-text {
+                font-size: 16px;
+            }
+            
+            .error-title {
+                font-size: 20px;
+            }
+            
+            .error-message {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Gamer Meets</div>
+            <div class="loading-subtitle">Chargement de l'application...</div>
+        </div>
+    </div>
+
+    <!-- Error fallback (hidden by default) -->
+    <div id="error-fallback" class="error-container" style="display: none;">
+        <div class="error-icon">⚠️</div>
+        <h1 class="error-title">Erreur de chargement</h1>
+        <p class="error-message">
+            Une erreur s'est produite lors du chargement de l'application.
+            Vérifiez votre connexion internet et réessayez.
+        </p>
+        <button class="retry-button" onclick="window.location.reload()">
+            Réessayer
+        </button>
+    </div>
+
+    <script>
+        // Error handling
+        window.addEventListener('error', function(e) {
+            console.error('Global error:', e.error);
+            showErrorFallback();
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('Unhandled promise rejection:', e.reason);
+            showErrorFallback();
+        });
+
+        function showErrorFallback() {
+            document.getElementById('root').style.display = 'none';
+            document.getElementById('error-fallback').style.display = 'flex';
+        }
+
+        // Service Worker registration for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Timeout fallback
+        setTimeout(function() {
+            const rootElement = document.getElementById('root');
+            const loadingContainer = rootElement.querySelector('.loading-container');
+            
+            if (loadingContainer && loadingContainer.style.display !== 'none') {
+                console.warn('App loading timeout - showing error fallback');
+                showErrorFallback();
+            }
+        }, 30000); // 30 second timeout
+    </script>
+</body>
+</html>

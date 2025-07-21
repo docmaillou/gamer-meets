@@ -1,0 +1,79 @@
+{
+  "title": "Profile",
+  "sections": {
+    "profile": "Profile information",
+    "settings": "Settings",
+    "about": "About"
+  },
+  "profile": {
+    "edit": "Edit profile",
+    "gamerType": "Gamer type",
+    "favoriteGames": "Favorite games",
+    "meetPreference": "Meet preference",
+    "bio": "Biography",
+    "joinedDate": "Member since {{date}}",
+    "stats": {
+      "meetsCreated": "Meets created",
+      "meetsJoined": "Meets joined",
+      "conversations": "Conversations"
+    }
+  },
+  "settings": {
+    "language": "Language",
+    "french": "Français",
+    "english": "English",
+    "notifications": "Notifications",
+    "pushNotifications": "Push notifications",
+    "emailNotifications": "Email notifications",
+    "privacy": "Privacy",
+    "profileVisibility": "Profile visibility",
+    "showOnlineStatus": "Show online status",
+    "account": "Account",
+    "changePhoneNumber": "Change phone number",
+    "deleteAccount": "Delete account",
+    "logout": "Logout"
+  },
+  "editProfile": {
+    "title": "Edit profile",
+    "save": "Save changes",
+    "cancel": "Cancel",
+    "changeAvatar": "Change photo",
+    "removeAvatar": "Remove photo"
+  },
+  "gamerTypes": {
+    "casual": "Casual",
+    "competitive": "Competitive",
+    "creator": "Creator"
+  },
+  "meetPreferences": {
+    "online": "Online",
+    "inPerson": "In person",
+    "mixed": "Both"
+  },
+  "about": {
+    "version": "Version {{version}}",
+    "support": "Support",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "feedback": "Feedback"
+  },
+  "confirmations": {
+    "logout": {
+      "title": "Logout",
+      "message": "Are you sure you want to logout?",
+      "confirm": "Logout",
+      "cancel": "Cancel"
+    },
+    "deleteAccount": {
+      "title": "Delete account",
+      "message": "This action is irreversible. All your data will be deleted.",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    }
+  },
+  "success": {
+    "profileUpdated": "Profile updated successfully",
+    "settingsUpdated": "Settings updated",
+    "languageChanged": "Language changed"
+  }
+}
